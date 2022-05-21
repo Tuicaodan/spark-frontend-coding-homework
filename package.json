@@ -1,0 +1,20 @@
+{
+  "name": "spark-frontend-coding-homework",
+  "version": "1.0.0",
+  "description": "Hi there! This is a simple coding test from Spark Sport. We like you! And we would like to know more about you, now this stage you can demonstrate us your awesome coding skills! We writing code every day, now we want to know how you write code as well!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tuicaodan/spark-frontend-coding-homework.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Tuicaodan/spark-frontend-coding-homework/issues"
+  },
+  "homepage": "https://github.com/Tuicaodan/spark-frontend-coding-homework#readme"
+}

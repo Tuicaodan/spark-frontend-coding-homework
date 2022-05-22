@@ -8,6 +8,7 @@ exports.getMovieList = async (req, res) => {
     const movieList = await fetchMovieList(enteredTitle, page);
     res.status(200).json(movieList);
   } catch (error) {
+    console.log("error".error);
     res.status(error.status).json({ error: error.message });
   }
 };
@@ -16,7 +17,6 @@ exports.getMovieDetails = async (req, res) => {
   const movieId = req.params.id;
 
   try {
-    console.log("fetching...");
     const movieDetails = await fetchMovieDetails(movieId);
     cache.set(movieId, movieDetails);
     res.status(200).json(movieDetails);

@@ -6,20 +6,21 @@ export const SearchItemContainer = styled.li`
         bg-[#F6F7F7]
         rounded-lg
         shadow-lg
-        h-72
         list-none
         my-4
-        mx-2
+        mx-4
         relative
         flex
         flex-row
         justify-center
         cursor-pointer
+        h-[296px]
+        w-[191px]
     `}
   img {
     ${tw`
-        h-full
-        w-full
+        object-cover
+        object-center
         rounded-lg
           `}
   }

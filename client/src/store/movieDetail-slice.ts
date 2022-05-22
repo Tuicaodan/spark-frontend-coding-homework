@@ -19,6 +19,7 @@ const defaultMovieDetail = {
     profile_path: "",
   },
   actors: [],
+  recommended: [],
 } as MovieDetail;
 
 const initialMovieDetailState = {

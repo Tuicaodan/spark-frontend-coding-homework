@@ -23,6 +23,7 @@ export type MovieDetail = {
   director: Director;
   actors: Cast[];
   vote_average: number;
+  recommended: MovieInList[];
 };
 
 export type Genre = {

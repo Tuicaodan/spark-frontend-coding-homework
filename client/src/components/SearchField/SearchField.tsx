@@ -21,6 +21,7 @@ const SearchField = () => {
 
   const inputHandler = async (searchText: string) => {
     dispatch(uiActions.showSearchDropdown(true));
+    dispatch(uiActions.showSearchResultGallery(false));
     setEnteredText(searchText);
   };
 

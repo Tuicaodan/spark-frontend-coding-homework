@@ -7,4 +7,5 @@ const { verifyCache } = require("../middlewares/cache");
 apiRouter.get("/movies", apiController.getMovieList);
 apiRouter.get("/movie/:id", verifyCache, apiController.getMovieDetails);
 
+
 module.exports = apiRouter;

@@ -1,6 +1,10 @@
 import tw from "twin.macro";
 import styled from "styled-components";
 
+type BurgerMenuContainerProps = {
+  isOpen: boolean;
+};
+
 export const NavContainer = styled.header`
   ${tw`
     flex
@@ -48,6 +52,70 @@ export const NavItems = styled.nav`
     flex-col
     justify-center
     px-2
+    `}
+  }
+  a {
+    ${tw`
+    text-white
+    no-underline
+    hover:text-gray-300
+    active:text-gray-300
+    `}
+  }
+`;
+
+export const BurgerMenuContainer = styled.div`
+  right: ${(props: BurgerMenuContainerProps) =>
+    props.isOpen ? "-20px" : "-200px"};
+  transition: 500ms;
+  ${tw`
+    flex
+    flex-col
+    justify-start
+    absolute
+    h-full
+    w-[200px]
+    bg-[rgba(0,0,0,0.7)]
+    z-[98]
+    `}
+`;
+
+export const BugerMenuIcon = styled.div`
+  transition: 1s;
+  ${tw`
+    absolute
+    left-[-55px]
+    z-[99]
+    `}
+`;
+
+export const BurgerMenuItems = styled.nav`
+  ${tw`
+    flex
+  mt-16
+    `}
+  ul {
+    ${tw`
+    flex
+    flex-col
+    lg:mr-8
+    ml-4
+    mt-16
+    my-2
+    list-none
+    text-white
+    `}
+  }
+  li {
+    ${tw`
+    w-full
+    mx-auto
+    my-2
+    text-base
+    flex
+    flex-col
+    justify-center
+    py-2
     `}
   }
   a {

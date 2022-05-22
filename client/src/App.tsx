@@ -6,6 +6,7 @@ import "./App.css";
 
 import Layout from "./components/layout/Layout";
 import HomePage from "./pages/HomePage";
+import NoResourcesPage from "./pages/NoResourcesPage";
 import MovieDetailPage from "./pages/MovieDetailPage";
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/movie/:id" element={<MovieDetailPage />} />
+          <Route path ="/*" element={<NoResourcesPage />} />
         </Routes>
       </Layout>
     </Provider>

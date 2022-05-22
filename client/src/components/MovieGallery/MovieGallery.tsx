@@ -2,18 +2,19 @@ import React from "react";
 import { useSelector } from "react-redux";
 import { RootState } from "../../store/index";
 
-import SearchResultItem from "./SearchResultItem";
+import MovieGalleryItem from "./MovieGalleryItem";
+import { MovieInList } from "../../types/movie-types";
 
 import {
   SearchResultListContainer,
   SearchResultLoadMore,
-} from "./SearchResultGallery.styles";
+} from "./MovieGallery.styles";
 
-const SearchResultGallery = () => {
-  const searhResult = useSelector(
-    (state: RootState) => state.movieList.movieList.searchList
-  );
+type Props = {
+  list: MovieInList[];
+};
 
+const MovieGallery = ({ list: searhResult }: Props) => {
   const renderSearchResultItems = () => {
     if (searhResult.length === 0) {
       return (
@@ -23,7 +24,7 @@ const SearchResultGallery = () => {
       );
     }
     return searhResult.map((movie) => (
-      <SearchResultItem
+      <MovieGalleryItem
         key={movie.id}
         title={movie.title}
         year={movie.year}
@@ -39,4 +40,4 @@ const SearchResultGallery = () => {
   );
 };
 
-export default SearchResultGallery;
+export default MovieGallery;

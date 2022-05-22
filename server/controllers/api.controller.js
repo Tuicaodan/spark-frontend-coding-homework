@@ -32,9 +32,9 @@ exports.getRecommendedMovies = async (req, res) => {
   const movieId = req.params.id;
 
   try {
-    const movieDetails = await fetcRecommendedMovies(movieId);
-    const recommandedMovies = movieDetails.recommandedMovies;
-    res.status(200).json(recommandedMovies);
+    const recommendedMovies = await fetcRecommendedMovies(movieId);
+    console.log(recommendedMovies);
+    res.status(200).json(recommendedMovies);
   } catch (error) {
     res.status(500).json({ error: error.message });
   }

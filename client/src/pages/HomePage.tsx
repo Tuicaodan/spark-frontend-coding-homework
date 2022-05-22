@@ -6,12 +6,17 @@ import { uiActions } from "../store/ui-slice";
 import Logo from "../ui/Logo";
 import SearchField from "../components/SearchField/SearchField";
 import { HomePageContainer } from "./HomePage.styles";
-import SearchResultGallery from "../components/SearchResultGallery/SearchResultGallery";
+import MovieGallery from "../components/MovieGallery/MovieGallery";
+
 const HomePage = () => {
   const dispatch = useDispatch();
 
   const isGalleryOpen = useSelector(
     (state: RootState) => state.ui.showSearchReultGallery
+  );
+
+  const searhResult = useSelector(
+    (state: RootState) => state.movieList.movieList.searchList
   );
 
   useEffect(() => {
@@ -22,7 +27,7 @@ const HomePage = () => {
     <HomePageContainer>
       <Logo hasText={true} color={"black"} size={150} />
       <SearchField />
-      {isGalleryOpen && <SearchResultGallery />}
+      {isGalleryOpen && <MovieGallery list={searhResult} />}
     </HomePageContainer>
   );
 };

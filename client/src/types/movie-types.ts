@@ -8,6 +8,7 @@ export type MovieInList = {
 export type MovieList = {
   loadPage: number;
   searchList: MovieInList[];
+  recommendedList: MovieInList[];
 };
 
 export type MovieDetail = {

@@ -3,8 +3,6 @@ import { useSelector } from "react-redux";
 import { RootState } from "../../store/index";
 import { MovieDetailContainer } from "./MovieDetail.styles";
 
-import { movieDetail } from "../../asset/fake-data";
-
 import DetailTitle from "./MovieDetailItem/DetailTitle";
 import DetailInstruction from "./MovieDetailItem/DetailOverview";
 import DetailPoster from "./MovieDetailItem/DetailPoster";

@@ -28,14 +28,14 @@ exports.getMovieDetails = async (req, res) => {
   }
 };
 
-exports.getRecommendedMovies = async (req, res) => {
-  const movieId = req.params.id;
+// exports.getRecommendedMovies = async (req, res) => {
+//   const movieId = req.params.id;
 
-  try {
-    const recommendedMovies = await fetcRecommendedMovies(movieId);
-    console.log(recommendedMovies);
-    res.status(200).json(recommendedMovies);
-  } catch (error) {
-    res.status(500).json({ error: error.message });
-  }
-};
+//   try {
+//     const recommendedMovies = await fetcRecommendedMovies(movieId);
+//     console.log(recommendedMovies);
+//     res.status(200).json(recommendedMovies);
+//   } catch (error) {
+//     res.status(500).json({ error: error.message });
+//   }
+// };

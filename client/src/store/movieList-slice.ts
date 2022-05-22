@@ -6,7 +6,6 @@ const initialMovieListState = {
   movieList: {
     loadPage: 1,
     searchList: [],
-    recommendedList: [],
   } as MovieList,
 };
 
@@ -25,9 +24,6 @@ const movieListSlice = createSlice({
     },
     updateLoadedPage: (state, action) => {
       state.movieList.loadPage = state.movieList.loadPage + action.payload;
-    },
-    setRecommendedList: (state, action) => {
-      state.movieList.recommendedList = action.payload;
     },
   },
 });

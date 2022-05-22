@@ -24,7 +24,7 @@ const MovieDetailPage = () => {
     navigate("/noresourcesfound");
   }
 
-  const { isLoading, error, sendRequest } = useHttp();
+  const { isLoading, error, sendRequest:fetchDetail } = useHttp();
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -32,27 +32,13 @@ const MovieDetailPage = () => {
       const MovieDetailEndpoint = process.env.REACT_APP_API_BASE_URL
         ? process.env.REACT_APP_API_BASE_URL
         : "http://localhost:8080/api";
-      const MovieDetailData = await sendRequest({
+      const MovieDetailData = await fetchDetail({
         url: MovieDetailEndpoint + `/movie/${id}`,
       });
       dispatch(movieDetailActions.setMovieDetail(MovieDetailData));
     };
     movieDetail();
-  }, []);
-
-  useEffect(() => {
-    const recommendedMovies = async () => {
-      const recommendEndpoint = process.env.REACT_APP_API_BASE_URL
-        ? process.env.REACT_APP_API_BASE_URL
-        : "http://localhost:8080/api";
-      const recommendData = await sendRequest({
-        url: recommendEndpoint + `/recommended/${id}`,
-      });
-      console.log("data", recommendData);
-      dispatch(movieListActions.setRecommendedList(recommendData));
-    };
-    recommendedMovies();
-  }, []);
+  }, [id]);
 
   const renderMovieDtailPage = () => {
     if (isLoading) {

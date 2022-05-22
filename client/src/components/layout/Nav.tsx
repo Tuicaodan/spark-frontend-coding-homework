@@ -40,7 +40,7 @@ const Nav = () => {
                 <Link to="/">Home</Link>
               </li>
               <li>
-                <Link to="#">About</Link>
+                <Link to="/uselesspage">An Useless Button</Link>
               </li>
             </ul>
           </BurgerMenuItems>
@@ -52,7 +52,7 @@ const Nav = () => {
               <Link to="/">Home</Link>
             </li>
             <li>
-              <Link to="#">About</Link>
+              <Link to="/uselesspage">An Useless Button</Link>
             </li>
           </ul>
         </NavItems>

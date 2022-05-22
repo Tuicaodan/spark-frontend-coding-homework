@@ -8,7 +8,6 @@ export type MovieInList = {
 export type MovieList = {
   loadPage: number;
   searchList: MovieInList[];
-  recommendedList: MovieInList[];
 };
 
 export type MovieDetail = {
@@ -24,6 +23,7 @@ export type MovieDetail = {
   director: Director;
   actors: Cast[];
   vote_average: number;
+  recommended: MovieInList[];
 };
 
 export type Genre = {

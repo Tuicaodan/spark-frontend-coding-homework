@@ -15,9 +15,11 @@ const fetchMovieList = async (title, page) => {
 const fetchMovieDetails = async (id) => {
   const productionInfo = await fetchMoviProductionInfo(id);
   const creditInfo = await fetchMovieCredits(id);
+  const recommendedMovies = await fetcRecommendedMovies(id);
   const fullDetails = {
     ...productionInfo,
     ...creditInfo,
+    recommended: recommendedMovies,
   };
   return fullDetails;
 };

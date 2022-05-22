@@ -8,6 +8,7 @@ import Layout from "./components/layout/Layout";
 import HomePage from "./pages/HomePage";
 import NoResourcesPage from "./pages/NoResourcesPage";
 import MovieDetailPage from "./pages/MovieDetailPage";
+import UselessPage from "./pages/UselessPage";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/movie/:id" element={<MovieDetailPage />} />
+          <Route path="/uselesspage" element={<UselessPage />} />
           <Route path ="/*" element={<NoResourcesPage />} />
         </Routes>
       </Layout>

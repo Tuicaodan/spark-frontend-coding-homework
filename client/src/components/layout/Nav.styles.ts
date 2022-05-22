@@ -40,6 +40,7 @@ export const NavItems = styled.nav`
     mr-4
     list-none
     text-white
+    font-bold
     `}
   }
   li {
@@ -56,7 +57,6 @@ export const NavItems = styled.nav`
   }
   a {
     ${tw`
-    text-white
     no-underline
     hover:text-gray-300
     active:text-gray-300

@@ -12,4 +12,10 @@ export const NoResourcesPageContainer = styled.div`
         font-bold
         text-[3em]
     `}
+  img {
+    ${tw`
+    block
+        mx-auto
+     `}
+  }
 `;

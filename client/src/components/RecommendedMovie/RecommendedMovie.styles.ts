@@ -2,15 +2,14 @@ import tw from "twin.macro";
 import styled from "styled-components";
 
 export const RecommendedListContainer = styled.div`
-  ${tw`
+  width: fit-content ${tw`
+  mt-16
         flex
         flex-col
         justify-start
-        h-[300px]
-        bg-gray-500
         my-auto
-        mx-auto
-        `}
+        h-full
+        `};
 `;
 
 export const RecommendedListTitle = styled.div`
@@ -19,6 +18,7 @@ export const RecommendedListTitle = styled.div`
         text-gray-700
         text-lg
         font-bold
+        pt-8
         `}
 `;
 
@@ -37,11 +37,9 @@ export const MessageContainer = styled.div`
 `;
 
 export const RecommendedList = styled.div`
-  width: fit-content ${tw`
+  ${tw`
         flex
         flex-row
-        justify-start
-        h-[200px]
-        overflow-x-auto
+        overflow-x-scroll
         `};
 `;

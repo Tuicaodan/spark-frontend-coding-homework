@@ -1,7 +1,4 @@
 import React from "react";
-import { useSelector } from "react-redux";
-import { RootState } from "../../store/index";
-
 import MovieGalleryItem from "./MovieGalleryItem";
 import { MovieInList } from "../../types/movie-types";
 

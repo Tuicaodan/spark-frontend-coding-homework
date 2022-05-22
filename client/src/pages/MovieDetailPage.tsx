@@ -1,11 +1,10 @@
 import React, { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { useParams } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 
 import useHttp from "../hooks/use-http";
 import { movieDetailActions } from "../store/movieDetail-slice";
-import { movieListActions } from "../store/movieList-slice";
 
 import MovieDetail from "../components/MovieDetail/MovieDetail";
 import RecommendedMovie from "../components/RecommendedMovie/RecommendedMovie";

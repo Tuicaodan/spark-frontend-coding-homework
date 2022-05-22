@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-import { MovieInList, MovieDetail, MovieList } from "../types/movie-types";
+import { MovieDetail } from "../types/movie-types";
 
 const defaultMovieDetail = {
   id: 0,

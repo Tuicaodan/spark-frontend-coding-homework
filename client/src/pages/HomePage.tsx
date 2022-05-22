@@ -24,7 +24,7 @@ const HomePage = () => {
   }, []);
 
   return (
-    <HomePageContainer>
+    <HomePageContainer showGallery={isGalleryOpen }>
       <Logo hasText={true} color={"black"} size={150} />
       <SearchField />
       {isGalleryOpen && <MovieGallery list={searhResult} />}

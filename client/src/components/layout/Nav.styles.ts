@@ -75,7 +75,7 @@ export const BurgerMenuContainer = styled.div`
     absolute
     h-full
     w-[200px]
-    bg-[rgba(0,0,0,0.7)]
+    bg-[rgba(0,0,0,0.8)]
     z-[98]
     `}
 `;

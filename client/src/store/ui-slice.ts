@@ -1,5 +1,4 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { closeSync } from "fs";
 
 const uiInitialSate = {
   showSearchReultGallery: false,

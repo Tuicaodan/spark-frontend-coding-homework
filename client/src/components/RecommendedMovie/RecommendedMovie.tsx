@@ -1,10 +1,8 @@
-import React, { useState, useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import React from "react";
+import { useSelector } from "react-redux";
 import { RootState } from "../../store/index";
 
-import LoadingSpinner from "../../ui/LoadingSpinner";
 import MovieGalleryItem from "../MovieGallery/MovieGalleryItem";
-import { MovieInList } from "../../types/movie-types";
 
 import {
   RecommendedListContainer,

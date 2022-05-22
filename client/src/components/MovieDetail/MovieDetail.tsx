@@ -8,7 +8,6 @@ import DetailInstruction from "./MovieDetailItem/DetailOverview";
 import DetailPoster from "./MovieDetailItem/DetailPoster";
 import DetailRate from "./MovieDetailItem/DetailRate";
 import DetailCredits from "./MovieDetailItem/DetailCredits";
-import LoadingSpinner from "../../ui/LoadingSpinner";
 
 const MovieDetail = () => {
   const movieDetail = useSelector(

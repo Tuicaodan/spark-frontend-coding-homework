@@ -7,7 +7,7 @@ import {
   ProfileCharacter,
   ProfileText,
 } from "./DetailCreditPerson.styles";
-import missingCreditImage from "../../../asset/image/missingPortfilo.png";
+import missingCreditImage from "../../../asset/image/missingPortfolio.png";
 
 type Props = {
   profile_path: string;

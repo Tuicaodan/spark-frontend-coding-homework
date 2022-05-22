@@ -12,7 +12,7 @@ export const DetailTitleContainer = styled.div`
 
 export const Title = styled.div`
   ${tw`
-        pt-6
+        pt-2
         align-middle
         flex
         flex-row
@@ -21,7 +21,7 @@ export const Title = styled.div`
         `}
   h1 {
     ${tw`
-        text-2xl
+        text-[40px]
         font-bold
         text-center
         my-auto
@@ -30,7 +30,7 @@ export const Title = styled.div`
   }
   span {
     ${tw`
-      text-xl
+      text-2xl
       font-normal
       text-center
       italic
@@ -43,7 +43,7 @@ export const Tagline = styled.div`
   ${tw` 
     text-gray-400
     italic
-   text-xs
+   text-[20px]
     text-center
   `}
 `;
@@ -54,7 +54,7 @@ export const BasicInfo = styled.div`
     flex-row  
     justify-center  
     mx-auto
-    text-[9px]
+    text-[13px]
     `}
 `;
 

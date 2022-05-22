@@ -1,50 +1,60 @@
-# Coding Homework
+# The Minimalism Movie Search
 
-Hi there! This is a simple coding test from Spark Sport. We like you! And we would like to know more about you, now this stage you can demonstrate us your awesome coding skills! We writing code every day, now we want to know how you write code as well!
+> - This is a super simple searching app that searches for real basic movie information.
 
-So, let's build a web application, that we can use to search for movies and display the detail of the movie!
+## Table of Contents
 
-This test should be completed using ReactJS and ideally Redux (but not compulsary).
+- [General Info](#general-information)
+- [Screenshots](#screenshots)
+- [Setup](#setup)
 
-## Design / User flow
+## General Information
 
-Full flow can get here: https://xd.adobe.com/view/0b6f9418-1224-418c-b1bb-7fad2462bbe1-5e3c/
+- The aim of this project is to demonstrate the use of React/Redux, Node.js, and TypeScript. And also want to try to prove some of my residual design sense.🤣
 
-### Home page
+## Screenshots
 
-This is the home page of the app. With whatever you like to name this application and a search box.
+- Home Page: <br />
+  ![homepage](./screenshots/homepage.png)
 
-![home page](./home_page.png)
+- Home Page while searching: <br />
+  ![searching](./screenshots/searching.png)
 
-### Search function
+- Home Page search results: <br />
+  ![searchResult](./screenshots/searchResult.png)
 
-When typing something in the search box, it will list related result like the autocomplete you saw in Google search or any other search.
+- Movie detail page: <br />
+  ![detailpage](./screenshots/detailpage.png)
 
-No need to show all the results, probably just a few most related results should be enough.
+## Setup
 
-![search](./search_result.png)
+- The Server
 
-### Detail page
+  - To run the server, `cd` to the server folder and install packages using npm
+    ```
+    $ cd server
+    $ npm install
+    $ npm run
+    ```
+  - You need to have your own `.env` file, which should include the info below:
+    ```
+    TMDB_DOMAIN = "https://api.themoviedb.org/3"
+    TMDB_API_KEY = "thdb API key "
+    PORT=8080
+    ```
 
-Once you click a movie in the autocomplete drop-down list, will navigate you to the detail page, in this page, you might see the movie poster, title, actors etc. whatever other information you think you wish to have
-
-![detail page](./detail_page.png)
-
-## API
-
-We suggest that you can use [The Movie DB API](https://developers.themoviedb.org/3/getting-started), and you might need to [register](https://www.themoviedb.org/login) and create an API key for it.
-
-For search the movie with text, you can use this endpoint: https://developers.themoviedb.org/3/search/search-movies
-
-For the detail of a movie, you can use this endpoint: https://developers.themoviedb.org/3/movies/get-movie-details
-
-An example of the API call will be like this: https://api.themoviedb.org/3/search/movie?query={key_word}?&api_key={api_key}
-
-_If you have problem with API setup, local static data demo is also acceptable_
-
-## Some kind tips
-
-- We favour unit tested code, but not a must-have
-- Don't forget to create/update README to let us know how to set up and run your code.
-- You can branch this repo and complete work in your own branch.
-- No need to stress off, enjoy coding, be yourself and good luck!
+- The Client
+  - To run the server, `cd` to the client folder and install packages using npm
+    ```
+    $ cd client
+    $ npm install
+    $ npm run
+    ```
+  - You also need your own `.env` file, which should include the info below:
+    ```
+    ## Here is the URLs for this env file:
+    REACT_APP_API_BASE_URL = 'http://localhost:8080/api'
+    REACT_APP_POSTER_W500_API_BASE_URL = 'https://image.tmdb.org/t/p/w500'
+    REACT_APP_POSTER_185_API_BASE_URL = 'https://image.tmdb.org/t/p/w185'
+    REACT_APP_BACKDROP_ORIGINAL_API_BASE_URL = 'https://image.tmdb.org/t/p/original'
+    ```

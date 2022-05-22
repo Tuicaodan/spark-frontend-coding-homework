@@ -33,13 +33,14 @@ export const ProfileText = styled.div`
         text-[10px]
         text-center
         text-gray-800
-        mt-1
+        mt-[1px]
         `}
 `;
 
 export const ProfileName = styled.div`
   ${tw`
         font-bold
+        text-[12px]
         `}
 `;
 

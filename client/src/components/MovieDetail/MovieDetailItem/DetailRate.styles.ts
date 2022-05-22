@@ -20,7 +20,7 @@ export const RateTitle = styled.div`
     m-auto
     text-center 
     font-bold
-    text-sm
+    text-[16px]
     mx-auto
     `}
 `;

@@ -31,7 +31,7 @@ export const DetailInstructionOverview = styled.div`
   }
   p {
     ${tw`
-        text-[10px]
+        text-[15px]
         align-text-top
         leading-none
         `}

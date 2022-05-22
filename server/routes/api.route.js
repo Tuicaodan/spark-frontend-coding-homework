@@ -6,5 +6,10 @@ const { verifyCache } = require("../middlewares/cache");
 
 apiRouter.get("/movies", apiController.getMovieList);
 apiRouter.get("/movie/:id", verifyCache, apiController.getMovieDetails);
+apiRouter.get(
+  "/recommanded/:id",
+  verifyCache,
+  apiController.getRecommendedMovies
+);
 
 module.exports = apiRouter;

@@ -36,6 +36,13 @@ const fetchMovieCredits = async (id) => {
   return transformedData;
 };
 
+const fetcRecommendedMovies = async (id) => {
+  const url = `${process.env.TMDB_DOMAIN}/movie/${id}/recommendations?api_key=${process.env.TMDB_API_KEY}`;
+  const RawData = await sendHttpRequest(url);
+  const transformedData = transformMovieList(RawData.results);
+  return transformedData;
+};
+
 const sendHttpRequest = async (url) => {
   const response = await fetch(url, {
     method: "GET",
@@ -46,10 +53,9 @@ const sendHttpRequest = async (url) => {
   const data = await response.json();
   if (!response.ok) {
     const error = new Error(data.status_message);
-    error.status = response.status;
     throw error;
   }
   return data;
 };
 
-module.exports = { fetchMovieList, fetchMovieDetails };
+module.exports = { fetchMovieList, fetchMovieDetails, fetcRecommendedMovies };

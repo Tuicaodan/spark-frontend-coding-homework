@@ -58,3 +58,7 @@
     REACT_APP_POSTER_185_API_BASE_URL = 'https://image.tmdb.org/t/p/w185'
     REACT_APP_BACKDROP_ORIGINAL_API_BASE_URL = 'https://image.tmdb.org/t/p/original'
     ```
+- Or you can use my pre-filled env info in the `env.zip` file
+  - copy the content of `server env.txt` and create a `.env` in the server root folder
+  - copy the content of `client env.txt` and create a `.env` in the client root folder
+  - You are good to go

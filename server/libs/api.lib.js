@@ -1,4 +1,6 @@
 const fetch = require("node-fetch");
+const https = require("https");
+
 const {
   transformMovieList,
   tranformMovieProductionInfo,
@@ -59,5 +61,26 @@ const sendHttpRequest = async (url) => {
   }
   return data;
 };
+
+const httpsGet = async (url) => {
+  return new Promise((resolve, reject) => {
+    let dataString = "";
+
+    const req = https.get(url, (res) => {
+      res
+        .on("data", (chunk) => {
+          dataString += chunk;
+        })
+        .on("end", () => {
+          resolve(JSON.parse(dataString));
+        });
+    });
+    req.on("error", (e) => {
+      console.log(e.message);
+    });
+    req.end();
+  });
+};
+
 
 module.exports = { fetchMovieList, fetchMovieDetails, fetcRecommendedMovies };
